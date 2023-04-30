@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="about-col-1">
                     <div>
-                        <img src="images/user.jpg" alt="userimg" id="user">
+                        <img src="images/user.jpg" alt="">
                     </div>
                     <div class="icn">
                         <i class="fa-solid fa-bars"></i>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p><b>I am Animesh Ray</b> an inspiring REACT and UI Desingner who is trying to seek a role to enhance and explore my technical knowledge in your company</p>
+                    <p><b>I am Animesh Ray</b> an inspiring REACT and UI Desingner who is trying to seek a role to enhance and explore my technical knowledge in your company.</p>
                     
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="openskill('skills')">SKILLS</p>
@@ -145,13 +145,15 @@
                         <a href="https://www.instagram.com/akashroy2657/"><i class="fa-brands fa-square-instagram"></i></a>
                         <a href="https://www.naukri.com/mnjuser/profile?id=&altresid"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="mycv.pdf" download class="btn btn2">Download CV</a>
+                    <a href="mycv.pdf" download class="btn btn2" id="btcv">Download CV</a>
                   </div>
                   <div class="contact-right">
-                    <input type="text" name="Name" placeholder="Your Name" required class="msg">
-                    <input type="email" name="Email" placeholder="Your Email" required class="msg">
-                    <textarea name="Message" rows="6" placeholder="Your Message" class="msg"></textarea>
-                    <button type="submit" class="btn btn2 ">Submit</button>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required class="msg">
+                        <input type="email" name="Email" placeholder="Your Email" required class="msg">
+                        <textarea name="Message" rows="6" placeholder="Your Message" class="msg"></textarea>
+                        <button type="submit" class="btn btn2 " id="btsb">Submit</button>
+                    </form>
                   </div>
                </div>
             </div>
@@ -181,7 +183,22 @@
             document.getElementById("skills").style.display="none";
             document.getElementById("experience").style.display="none";
             document.getElementById("education").style.display="block";
+        }function firstimage(){
+            document.getElementById("img1").src="images/user2.jpg";
+            
         }
+        
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzO_TfQi4gFL3KGDY1SNEnVJV2bwBVZu8ZGDtgPN7dTLxxOoFZHFZ7MRr1csH2k-vU/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
