@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c066516be2.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="bodyload()">
     <div id="header">
         <div class="container">
             <nav>
@@ -149,10 +149,11 @@
                   </div>
                   <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required class="msg">
-                        <input type="email" name="Email" placeholder="Your Email" required class="msg">
-                        <textarea name="Message" rows="6" placeholder="Your Message" class="msg"></textarea>
-                        <button type="submit" class="btn btn2 " id="btsb">Submit</button>
+                        <input type="text" name="Name" placeholder="Your Name" required class="msg" id="name">
+                        <input type="email" name="Email" placeholder="Your Email" required class="msg" id="email">
+                        <textarea name="Message" rows="6" placeholder="Your Message" class="msg" id="msg"></textarea>
+                        <button type="submit" class="btn btn2 " id="btsb" onclick="submitclick()">Submit</button>
+                        <p id="error"></p>
                     </form>
                   </div>
                </div>
@@ -186,6 +187,24 @@
         }function firstimage(){
             document.getElementById("img1").src="images/user2.jpg";
             
+        }
+        function bodyload(){
+            
+        }
+        function submitclick(){
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var msg=document.getElementById("msg").value;
+
+            if(name=="" || email==""){
+                document.getElementById("error").innerHTML="Please fill blanks";
+            }
+            else{
+                document.getElementById("error").innerHTML=`Submitted..<br>Thank You...`;
+                name.value=="";
+                email.value=="";
+                bodyload();
+            }
         }
         
     </script>

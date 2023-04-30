@@ -331,6 +331,11 @@ nav ul li a:hover::after{
 .copy-right i{
     color: #ff004f;
 }
+#error{
+    color:#ff004f;
+    font-size: 24px;
+    font-weight: 500;
+}
                 /*---------css for small screens----------------*/
 
 @media only screen and (max-width:600px){
