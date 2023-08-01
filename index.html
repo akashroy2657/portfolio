@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c066516be2.js" crossorigin="anonymous"></script>
 </head>
-<body onload="bodyload()">
+<body>
     <div id="header">
         <div class="container">
             <nav>
@@ -21,7 +21,14 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p><span>UI/UX</span> Designer</p>
+                 <div id="cont">
+                    <div>I'm a</div>
+                <div id="flip">
+                    <div id="st"> React Developer</div>
+                    <div id="nd"> UI/UX Designer</div>
+                    <div id="rd"> Web Designer</div>
+                </div>
+                 </div>
                 <h1>Hi, i'm <span id="name">Akash</span><br> Roy From India</h1>
             </div>
         </div>
@@ -32,7 +39,7 @@
             <div class="row">
                 <div class="about-col-1">
                     <div>
-                        <img src="images/user.jpg" alt="">
+                        <img src="images/user.jpg" alt="userimg" id="user1">
                     </div>
                     <div class="icn">
                         <i class="fa-solid fa-bars"></i>
@@ -42,8 +49,8 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p><b>I am Animesh Ray</b> an inspiring REACT and UI Desingner who is trying to seek a role to enhance and explore my technical knowledge in your company.</p>
-                    
+                    <p><b>SKILLS</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corrupti corporis quos velit nihil, labore inventore praesentium enim magni tempore eos cum vitae laboriosam harum eveniet qui nobis dolorem molestias ipsum laborum. Recusandae, corrupti!</p>
+
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="openskill('skills')">SKILLS</p>
                         <p class="tab-links active-link" onclick="openexp('experience')">EXPERIENCE</p>
@@ -81,20 +88,20 @@
                     <div>
                         <i class="fa-solid fa-code"></i>
                         <h1>Web Design</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est porro nemo numquam eligendi sunt consectetur a corporis ratione, mollitia modi at exercitationem? Laborum blanditiis, accusantium ducimus quam laboriosam explicabo sed voluptate officia sunt odit. At.</p>
-                        <a href="#">Learn More</a>
+                        <p>The process of planning,conceptualizing,and implementing the plan for designing a website in a way that is functional and offers a good user experience.</p>
+                        <a href="https://www.interaction-design.org/literature/topics/web-design">Learn More</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-crop-simple"></i>
                         <h1>UI/UX Design</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est porro nemo numquam eligendi sunt consectetur a corporis ratione, mollitia modi at exercitationem? Laborum blanditiis, accusantium ducimus quam laboriosam explicabo sed voluptate officia sunt odit. At.</p>
-                        <a href="#">Learn More</a>
+                        <p>Managing user journey as they interact with a product or services,while UI design focuses on the actual construction of that product or service's</p>
+                        <a href="https://www.smashingmagazine.com/search/">Learn More</a>
                     </div>
                     <div>
                         <i class="fa-brands fa-app-store"></i>
                         <h1>App Design</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est porro nemo numquam eligendi sunt consectetur a corporis ratione, mollitia modi at exercitationem? Laborum blanditiis, accusantium ducimus quam laboriosam explicabo sed voluptate officia sunt odit. At.</p>
-                        <a href="#">Learn More</a>
+                        <p>App design is a combination of UI and UX design to build out a usable piece of software .</p>
+                        <a href="https://www.smashingmagazine.com/2016/11/what-everyone-should-know-about-the-process-behind-app-design/">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -145,16 +152,13 @@
                         <a href="https://www.instagram.com/akashroy2657/"><i class="fa-brands fa-square-instagram"></i></a>
                         <a href="https://www.naukri.com/mnjuser/profile?id=&altresid"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="mycv.pdf" download class="btn btn2" id="btcv">Download CV</a>
+                    <a href="mycv.pdf" download class="btn btn2">Download CV</a>
                   </div>
                   <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required class="msg" id="name">
-                        <input type="email" name="Email" placeholder="Your Email" required class="msg" id="email">
-                        <textarea name="Message" rows="6" placeholder="Your Message" class="msg" id="msg"></textarea>
-                        <button type="submit" class="btn btn2 " id="btsb" onclick="submitclick()">Submit</button>
-                        <p id="error"></p>
-                    </form>
+                    <input type="text" name="Name" placeholder="Your Name" required class="msg">
+                    <input type="email" name="Email" placeholder="Your Email" required class="msg">
+                    <textarea name="Message" rows="6" placeholder="Your Message" class="msg"></textarea>
+                    <button type="submit" class="btn btn2 ">Submit</button>
                   </div>
                </div>
             </div>
@@ -163,13 +167,13 @@
             </div>
         </div>
     </div>
-                                    
+
 
     <script>
 
         var tablinks=document.getElementsByClassName("tab-links");
         var tabcontents=document.getElementsByClassName("tab-content");
-        
+
         function openskill(){
             document.getElementById("experience").style.display="none";
             document.getElementById("skills").style.display="block";
@@ -184,40 +188,7 @@
             document.getElementById("skills").style.display="none";
             document.getElementById("experience").style.display="none";
             document.getElementById("education").style.display="block";
-        }function firstimage(){
-            document.getElementById("img1").src="images/user2.jpg";
-            
         }
-        function bodyload(){
-            
-        }
-        function submitclick(){
-            var name=document.getElementById("name").value;
-            var email=document.getElementById("email").value;
-            var msg=document.getElementById("msg").value;
-
-            if(name=="" || email==""){
-                document.getElementById("error").innerHTML="Please fill blanks";
-            }
-            else{
-                document.getElementById("error").innerHTML=`Submitted..<br>Thank You...`;
-                name.value=="";
-                email.value=="";
-                bodyload();
-            }
-        }
-        
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzO_TfQi4gFL3KGDY1SNEnVJV2bwBVZu8ZGDtgPN7dTLxxOoFZHFZ7MRr1csH2k-vU/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
 </body>
 </html>
