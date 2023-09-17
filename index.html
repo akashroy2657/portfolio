@@ -12,15 +12,19 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.jpg" alt="logo" class="logo">
-                <ul>
-                    <li><a href="#header">Home</a></li>
+                <img src="images/logo.jpg" alt="logo" class="logo" id="logo">
+                <ul id="navul">
+                    <li><a class="active" href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contacts</a></li>
                 </ul>
+                <div id="btns">
+                    <button class="fa fa-bars" id="btn" onclick="menuclick()"></button>
+                    <button class="fa fa-window-close" id="bnt" onclick="closeclick()" onblur="blur()"></i>></button>
+                </div>
             </nav>
-            <div class="header-text">
+            <div class="header-text" id="header-text">
                  <div id="cont">
                     <div>I'm a</div>
                 <div id="flip">
@@ -38,13 +42,11 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <div>
+                    <div id="img1">
                         <img src="images/user.jpg" alt="userimg" id="user1">
                     </div>
-                    <div class="icn">
-                        <i class="fa-solid fa-bars"></i>
-                        <i class="fa-solid fa-house"></i>
-                        <i class="fa fa-chevron-left"></i>
+                    <div id="bord">
+
                     </div>
                 </div>
                 <div class="about-col-2">
@@ -188,6 +190,25 @@
             document.getElementById("skills").style.display="none";
             document.getElementById("experience").style.display="none";
             document.getElementById("education").style.display="block";
+        }
+        function menuclick(){
+            document.getElementById("navul").style.display="block";
+            document.getElementById("btn").style.display="none";
+            document.getElementById("bnt").style.display="block";
+            document.getElementById("logo").style.marginTop="-200px";
+            document.getElementById("header-text").style.marginTop="-200px";
+            document.getElementById("header-text").style.marginLeft="-20px";
+        }
+        function closeclick(){
+            document.getElementById("navul").style.display="none";
+            document.getElementById("btn").style.display="block";
+            document.getElementById("bnt").style.display="none";
+            document.getElementById("logo").style.marginTop="20px";
+            document.getElementById("header-text").style.marginTop="5px";
+            document.getElementById("header-text").style.marginLeft="0px";
+        }
+        function blur(){
+            document.getElementById("bnt").style.display="none";
         }
     </script>
 </body>

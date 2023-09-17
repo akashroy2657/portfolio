@@ -1,8 +1,9 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:sans-serif;
 }
 #header{
     background-image: url("images/ak1-02.jpeg");
@@ -21,29 +22,40 @@
 }
 .logo{
     width: 180px;
+    
+}
+#btn,#bnt{
+    font-size: 25px;
+    display: none;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
+    
+}
+nav ul{
+    background:#e1e0e0;
+    border-radius: 10px;
 }
 nav ul li{
     display: inline-block;
     margin: 15px 25px;
     list-style: none;
-    
+    font-size: 25px;
 }
 nav ul li a{
     text-decoration: none;
     color: black;
     position: relative;
-    font-size: 25px;
+    font-weight: bold;
 }
 nav ul li a::after{
     content: '';
     width: 0;
-    height: 3px;
+    height: 5px;
     background: #ff004f;
     position: absolute;
     left: 0;
@@ -77,9 +89,9 @@ nav ul li a:hover::after{
  }
 @keyframes show{
     0%{
-        margin-top:-95px;
+        margin-top:-100px;
     }
-    5%{margin-top: -95px;}
+    5%{margin-top: -100px;}
     25%{margin-top: -70px;}
     35%{margin-top: -70px;}
     50%{margin-top: -50px;}
@@ -89,7 +101,7 @@ nav ul li a:hover::after{
     89%{margin-top: 0px;}
     95%{margin-top: 0px;}
     100%{
-        margin-top: -95px;
+        margin-top: -100px;
     }
     
 }
@@ -130,17 +142,40 @@ nav ul li a:hover::after{
 .about-col-1{
     flex-basis: 35%;
 }
-.about-col-1 img{
-    width:300px;
-    border-top: 5px solid wheat;
-    border-bottom: 30px solid #fff;
-    border-radius: 15px;
-    border-left: 0.5px solid wheat;
-    border-right: 0.5px solid wheat;
-}
+
 .about-col-2{
     flex-basis: 60%;
     color:#fff;
+}
+#user1{
+    width: 200px;
+    border-radius: 50%;
+}
+#img1{
+
+}
+#bord{
+    width:320px ;
+    height: 320px;
+    background: transparent;
+    border: 5px solid white;
+    border-top-color: #42c58a;
+    border-bottom-color: #21d1f0;
+    border-left-color: #ef1ae1;
+    border-right-color: #cff635;
+    border-radius: 100%;
+    margin-top: -300px;
+    margin-left: -55px;
+    overflow: hidden;
+    animation: spin 2s  linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 .sub-title{
     color: #fff;
@@ -174,10 +209,10 @@ nav ul li a:hover::after{
 .tab-content ul li{
     list-style: none;
     margin: 10px 0;
+    font-size: 20px;
 }
 .tab-content ul li span{
     color: #b54769;
-    font-size: 14px;
 }
 .tab-content{
     display: none;
@@ -203,6 +238,7 @@ nav ul li a:hover::after{
     font-size: 13px;
     font-weight: 300;
     border-radius: 15px;
+    height: 400px;
     transition: background 0.5s, transform 0.5s;
 }
 .service-list div i{
@@ -392,6 +428,7 @@ nav ul li a:hover::after{
         font-size: 30px;
        
     }
+   
     .logo{
        margin-left: -70px;
        margin-top: -20px;
@@ -414,6 +451,12 @@ nav ul li a:hover::after{
     }
     .about-col-2 p{
         margin-top: 20px;
+    }
+    #bord{
+      margin-left: -10px;
+    }
+    #user1{
+        margin-left: 45px;
     }
     .msg{
         width: 300px;
@@ -499,6 +542,44 @@ nav ul li a:hover::after{
             margin-top: -60px;
         }
     }
+    #btn{
+       display: block;
+      
+    }
+    #bnt{
+        display: none;
+        margin-top: -140px;
+    }
+    nav{
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    nav ul{
+        background:#ababab;
+        border-radius: 10px;
+        flex-direction: row;
+        display:none;
+        height:250px;
+        margin-right: -200px;
+        margin-top: 50px;
+    }
+    nav ul li{
+        padding-top: 20px;
+        display: block;
+    }
+    #navul li a{
+        font-size: 25px;
+        color:#fff;
+    }
+    .logo{
+        margin-top:px;
+    }
+    #about{
+        margin-top: -100px;
+    }
+    
 }
 
 
