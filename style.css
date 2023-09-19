@@ -375,6 +375,10 @@ nav ul li a:hover::after{
     background: #ff004f;
     display: inline-block;
 }
+.btn.btn2:hover{
+    background-color: transparent;
+    border: 1.5px solid #ff004f;
+}
 .contact-right form{
    width: 100%;
 }
@@ -407,10 +411,8 @@ nav ul li a:hover::after{
 .copy-right i{
     color: #ff004f;
 }
-#error{
-    color:#ff004f;
-    font-size: 24px;
-    font-weight: 500;
+.contact-right p{
+    color: red;
 }
                 /*---------css for small screens----------------*/
 
