@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AkashRoy</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c066516be2.js" crossorigin="anonymous"></script>
 </head>
@@ -157,10 +157,12 @@
                     <a href="mycv.pdf" download class="btn btn2">Download CV</a>
                   </div>
                   <div class="contact-right">
-                    <input type="text" name="Name" placeholder="Your Name" required class="msg">
-                    <input type="email" name="Email" placeholder="Your Email" required class="msg">
-                    <textarea name="Message" rows="6" placeholder="Your Message" class="msg"></textarea>
-                    <button type="submit" class="btn btn2 ">Submit</button>
+                    <input type="text" name="Name" placeholder="Your Name" required class="msg" id="nmm" >
+                    <p id="nam"></p>
+                    <input type="email" name="Email" placeholder="Your Email" required class="msg" id="em">
+                    <p id="email"></p>
+                    <textarea name="Message" rows="6" placeholder="Your Message" class="msg" id="clientmsg"></textarea>
+                    <button type="submit" class="btn btn2 " onclick="submit()">Submit</button>
                   </div>
                </div>
             </div>
@@ -207,9 +209,19 @@
             document.getElementById("header-text").style.marginTop="5px";
             document.getElementById("header-text").style.marginLeft="0px";
         }
-        function blur(){
-            document.getElementById("bnt").style.display="none";
+        function submit(){
+            const nam=document.getElementById("nmm").value;
+            const email=document.getElementById("em").value;
+            if(nam=="" || email==""){
+                document.getElementById("nam").innerHTML="Please Enter Your Name!";
+                document.getElementById("email").innerHTML="Please Enter Your Email!";
+            }else{
+                document.getElementById("nam").innerHTML="";
+                document.getElementById("email").innerHTML="";
+                 window.open("submit.html");
+            }
         }
+        
     </script>
 </body>
 </html>
