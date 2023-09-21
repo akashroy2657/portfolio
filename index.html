@@ -154,15 +154,15 @@
                         <a href="https://www.instagram.com/akashroy2657/"><i class="fa-brands fa-square-instagram"></i></a>
                         <a href="https://www.naukri.com/mnjuser/profile?id=&altresid"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="mycv.pdf" download class="btn btn2">Download CV</a>
+                    <a href="Akash react resume.pdf" download class="btn btn2">Download CV</a>
                   </div>
                   <div class="contact-right">
-                    <input type="text" name="Name" placeholder="Your Name" required class="msg" id="nmm" >
-                    <p id="nam"></p>
-                    <input type="email" name="Email" placeholder="Your Email" required class="msg" id="em">
-                    <p id="email"></p>
-                    <textarea name="Message" rows="6" placeholder="Your Message" class="msg" id="clientmsg"></textarea>
-                    <button type="submit" class="btn btn2 " onclick="submit()">Submit</button>
+                        <input type="text" name="Name" placeholder="Your Name" required class="msg" id="nmm" >
+                        <p id="nam"></p>
+                        <input type="email" name="Email" placeholder="Your Email" required class="msg" id="em">
+                        <p id="email"></p>
+                        <textarea name="Message" rows="6" placeholder="Your Message" class="msg" id="clientmsg"></textarea>
+                        <button type="submit" class="btn btn2 " onclick="submit()">Submit</button>
                   </div>
                </div>
             </div>
@@ -218,10 +218,22 @@
             }else{
                 document.getElementById("nam").innerHTML="";
                 document.getElementById("email").innerHTML="";
-                 window.open("submit.html");
+                window.open("submit.html");
             }
         }
         
     </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpxkWwo9oBuXWWo_G4MpUj49Cdezd30LaeYk0f7gjQzN6E-ctvT-sE34rEmpn3LCI/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
