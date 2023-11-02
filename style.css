@@ -75,7 +75,7 @@ nav ul li a:hover::after{
 }
  #flip #st{
     background: #42c58a;
-    animation: show 5s linear infinite;
+    animation: show 5s  alternate  infinite;
  }
  #nd{
     background: #4ec7f3;
@@ -89,9 +89,9 @@ nav ul li a:hover::after{
  }
 @keyframes show{
     0%{
-        margin-top:-100px;
+        margin-top:-70px;
     }
-    5%{margin-top: -100px;}
+    5%{margin-top: -70px;}
     25%{margin-top: -70px;}
     35%{margin-top: -70px;}
     50%{margin-top: -50px;}
@@ -101,7 +101,7 @@ nav ul li a:hover::after{
     89%{margin-top: 0px;}
     95%{margin-top: 0px;}
     100%{
-        margin-top: -100px;
+        margin-top: -70px;
     }
     
 }
