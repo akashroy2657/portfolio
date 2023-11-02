@@ -534,15 +534,16 @@ nav ul li a:hover::after{
         0%{
             margin-top:-35px;
         }
-        5%{margin-top: -35px;}
-        25%{margin-top: -35px;}
-        35%{margin-top: -30px;}
-        50%{margin-top: -30px;}
-        50%{margin-top: -25px;}
-        65%{margin-top: -18px;}
-        78%{margin-top: -18px;}
-        89%{margin-top: 0px;}
-        95%{margin-top: 0px;}
+        9%{margin-top: -35px;}
+        18%{margin-top: -35px;}
+        27%{margin-top: -30px;}
+        36%{margin-top: -30px;}
+        45%{margin-top: -30px;}
+        54%{margin-top: -18px;}
+        63%{margin-top: -18px;}
+        72%{margin-top: -18px;}
+        81%{margin-top: 0px;}
+        90%{margin-top: 0px;}
         100%{
             margin-top: -45px;
         }
