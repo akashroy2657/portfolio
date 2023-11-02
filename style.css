@@ -122,6 +122,11 @@ nav ul li a:hover::after{
     background-color: #000000;
     color: aliceblue;
 }
+#abt{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
 #user{
     width: 300px;
 }
@@ -151,9 +156,7 @@ nav ul li a:hover::after{
     width: 200px;
     border-radius: 50%;
 }
-#img1{
 
-}
 #bord{
     width:320px ;
     height: 320px;
